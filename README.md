@@ -20,13 +20,15 @@
 
 
 
-### Section 1
+# Section 1
 
-### Section 2
+#Section 2
 
-### Section 3
+# Section 3
 
-## What does this do
+# What does this do
+
+
 # Photo and Data Credits
 I did not create nor do I own any images/data from airbnb nor am I affliated with airbnb
 

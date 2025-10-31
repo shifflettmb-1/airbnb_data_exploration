@@ -5,13 +5,13 @@
 ## Table Of Contents
 [Section 1](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#section-1)
 
-[`Section 2`](#feature)
+[Section 2](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#section-2)
 
-[`Section 3`](#feature)
+[Section 3](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#section-3)
 
-[`What does this do`](#feature)
+[What does this do](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#what-does-this-do)
 
-[`Photo and Data Credits`](#feature)
+[Photo and Data Credits](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#photo-and-data-credits)
 
 
 

@@ -3,7 +3,7 @@
 
 
 ## Table Of Contents
-[Section `Photo and Data Credits`](#feature)
+[`Photo and Data Credits`](#feature)
 
 ## Feature
 ### Section 1

@@ -3,7 +3,7 @@
 
 
 ## Table Of Contents
-[`Section 1`](#feature)
+[`Section 1`]([#feature](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#section-1))
 
 [`Section 2`](#feature)
 

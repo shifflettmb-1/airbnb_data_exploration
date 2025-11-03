@@ -133,6 +133,9 @@ if __name__ == "__main__":
     #fill in null values of host_name and name
     airbnb_df.fillna({"host_name": "Unknown", "name": "Unknown"}, inplace=True)
 
+    #rename name column to listing to better define
+    airbnb_df.rename(columns={"name": "listing"}, inplace=True)
+
     #Creating sub dfs based on the neighborhood group for better comparisons
     bronx_airbnb_df = airbnb_df[airbnb_df["neighbourhood_group"] == "Bronx"]
     brooklyn_airbnb_df = airbnb_df[airbnb_df["neighbourhood_group"] == "Brooklyn"]

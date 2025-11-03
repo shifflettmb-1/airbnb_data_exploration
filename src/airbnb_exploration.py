@@ -121,6 +121,40 @@ def make_bar_graph_word_counts(series, name_str):
     plt.tight_layout()
     plt.show()
 
+def make_scatter_reviews_price(df, name_str):
+    """ 
+    Create scatterplot comparing the number of reviews
+    and price of listing
+
+    Parameters
+    ----------
+    series: Series that has information about top 15 most common words
+    name_str: name of the Title for the graph 
+    
+    """    
+    fig, axs = plt.subplots(figsize = (12,4))
+    axs.scatter(df["price"], df["number_of_reviews"])
+    axs.set_xlabel('Price Per Night In $')
+    axs.set_ylabel('Number 0f Reviews (Total)')
+    axs.set_xticks(range(0, df["price"].max()+100, 50))
+    axs.set_yticks(range(0, df["number_of_reviews"].max()+100, 50))
+    print("reviews,", df["number_of_reviews"].max())
+    print("price,", df["price"].max())
+    axs.set_title(f"Top Performers Price VS Number Of Review {name_str}")
+    plt.tight_layout()
+    plt.show()
+
+def make_scatter_price_availability(df, name_str):
+    fig, axs = plt.subplots(figsize = (12,4))
+    axs.scatter(df["availability_365"], df["price"], color="brown")
+    axs.set_xlabel('Number 0f Days Available Per Year')
+    axs.set_ylabel('Price Per Night In $')
+    axs.set_yticks(range(0, df["price"].max()+100, 50))
+    axs.set_xticks(range(0, df["availability_365"].max()+20, 20))
+    axs.set_title(f" Price VS Availability {name_str}")
+    plt.tight_layout()
+    plt.show()
+
 
 if __name__ == "__main__":
 
@@ -143,7 +177,7 @@ if __name__ == "__main__":
     queens_airbnb_df = airbnb_df[airbnb_df["neighbourhood_group"] == "Queens"]
     staten_island_airbnb_df = airbnb_df[airbnb_df["neighbourhood_group"] == "Staten Island"]
 
-    #retrieve top performers and there most common words for all neighborhood groups
+    #retrieve top performers and their most common words for all neighborhood groups
     top_performers_bronx, top_15_words_bronx = get_top_performers_top_fifteen_words(bronx_airbnb_df)
     top_performers_brooklyn, top_15_words_brooklyn = get_top_performers_top_fifteen_words(brooklyn_airbnb_df)
     top_performers_manhattan, top_15_words_manhattan = get_top_performers_top_fifteen_words(manhattan_airbnb_df)
@@ -151,10 +185,28 @@ if __name__ == "__main__":
     top_performers_staten_island, top_15_words_staten_island = get_top_performers_top_fifteen_words(staten_island_airbnb_df)
     top_performers_overall, top_15_words_overall = get_top_performers_top_fifteen_words(airbnb_df)
 
-    #Create the bar graphs for data
+    #Create the bar graphs for most common words in each neighborhood group
     make_bar_graph_word_counts(top_15_words_bronx, "Bronx")
     make_bar_graph_word_counts(top_15_words_brooklyn, "Brooklyn")
     make_bar_graph_word_counts(top_15_words_manhattan, "Manhattan")
     make_bar_graph_word_counts(top_15_words_overall, "Overall In New York")
     make_bar_graph_word_counts(top_15_words_queens, "Queens")
     make_bar_graph_word_counts(top_15_words_staten_island, "Staten Island")
+
+    #Create scatter plots to see relationship between number ofreviews/price
+    make_scatter_reviews_price(top_performers_bronx, "Bronx")
+    make_scatter_reviews_price(top_performers_brooklyn, "Brooklyn")
+    make_scatter_reviews_price(top_performers_manhattan, "Manhattan")
+    make_scatter_reviews_price(top_performers_queens, "Queens")
+    make_scatter_reviews_price(top_performers_staten_island, "Staten Island")
+    make_scatter_reviews_price(top_performers_overall, "Overall In New York")
+
+    #Create scatter plots to see relationship between price/availabilty
+    make_scatter_price_availability(top_performers_bronx, "Bronx")
+    make_scatter_price_availability(top_performers_brooklyn, "Brooklyn")
+    make_scatter_price_availability(top_performers_queens, "Queens")
+    make_scatter_price_availability(top_performers_manhattan, "Manhattan")
+    make_scatter_price_availability(top_performers_staten_island, "Staten Island")
+    make_scatter_price_availability(top_performers_overall, "Overall")
+
+    

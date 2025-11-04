@@ -364,4 +364,4 @@ if __name__ == "__main__":
     make_ny_folium_map(non_tp_manhattan, top_performers_manhattan, "Manhattan")
     make_ny_folium_map(non_tp_queens, top_performers_queens, "Queens")
     make_ny_folium_map(non_tp_staten_island, top_performers_staten_island, "Staten Island")
-    make_ny_folium_map(non_tp_overall, top_performers_overall, "Overall_In_New_York")
+    #make_ny_folium_map(non_tp_overall, top_performers_overall, "Overall_In_New_York") #very large file but would work

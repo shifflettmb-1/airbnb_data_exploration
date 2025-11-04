@@ -5,6 +5,8 @@ import seaborn as sns
 import plotly.express as px
 import re
 import matplotlib.patches as mpatches
+import folium
+from folium.plugins import MarkerCluster
 
 #methods to remove punctuation re more efficient
 def remove_punctuation(text):
@@ -102,10 +104,30 @@ def get_top_performers_top_fifteen_words(df):
     top_fifteen_words = get_top_fifteen_words(top_ten_df)
     return top_ten_df, top_fifteen_words
 
+def get_non_top_performers(df, top_performers_df):
+    """ 
+    Filters out the ids of the top_performers from the df and returns the rows which the ids are not in 
+    top_performers_df. IDs are unique for each airbnb listing in df
+
+    Parameters
+    ----------
+    df: dataFrame of airbnb information that is unfiltered, possibly specific to neighborhood
+    toptop_performers_df: dataFrame of top performing airBnBs
+    
+    Returns
+    -------
+    non_top_performers_df: DataFrame of airbnb information that filters out top performers
+    from original df
+    
+    """
+    ids_in_top_performers_df = top_performers_df["id"]
+    non_top_performers_df = df[~df['id'].isin(ids_in_top_performers_df)]
+    return non_top_performers_df
+
+
 def make_bar_graph_word_counts(series, name_str):
     """ 
     Create bar graph of most common 15 words in the airbnb series
-
 
     Parameters
     ----------
@@ -124,13 +146,13 @@ def make_bar_graph_word_counts(series, name_str):
 
 def make_scatter_reviews_price(df, name_str):
     """ 
-    Create scatterplot comparing the number of reviews
+    Create scatterplot comparing the total number of reviews
     and price of listing
 
     Parameters
     ----------
-    series: Series that has information about top 15 most common words
-    name_str: name of the Title for the graph 
+    df: Dataframe that has airbnb information
+    name_str: string for the name of the Title for the graph 
     
     """
     #Seperate Colors based on room type
@@ -154,6 +176,16 @@ def make_scatter_reviews_price(df, name_str):
     plt.show()
 
 def make_scatter_price_availability(df, name_str):
+    """ 
+    Create scatterplot comparing the price per night
+    and availabilty
+
+    Parameters
+    ----------
+    df: Dataframe that has airbnb information
+    name_str: string for the name of the Title for the graph 
+    
+    """    
     fig, axs = plt.subplots(figsize = (12,4))
     axs.scatter(df["availability_365"], df["price"], color="brown")
     axs.set_xlabel('Number 0f Days Available Per Year')
@@ -165,10 +197,19 @@ def make_scatter_price_availability(df, name_str):
     plt.show()
 
 def make_scatter_reviews_per_month_price(df, name_str):
-    #Seperate Colors based on room type
+    """ 
+    Creates a scatter plot showing relationship between
+    Reviews per month and price
+
+    Parameters
+    ----------
+    df: Dataframe of airbnb data
+    name_str: string for the name of the Title for the graph
+    """
+    #Seperate Colors based on room type blue for private room, orange for entire home/apt
     color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
     
-    #Create multiple legend bars that correspond to the colors of the bar
+    #Create handles for legend bars that correspond to the colors of the bar
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
     
@@ -183,6 +224,71 @@ def make_scatter_reviews_per_month_price(df, name_str):
     plt.tight_layout()
     plt.show()
 
+def make_ny_folium_map(ntp_df, tp_df, name_str):
+    """ 
+    Create a folium map with lat, long data from the two dataframes.
+    Green House represent top performers
+    Red House represent under performers
+    Map Centers on New York
+
+    Provides review information and listing information in pop-up text
+
+    Parameters
+    ----------
+    ntp_df: DataFrame of underperforming airbnb of a particular area
+    tp_df: DataFrame of top performing airbnb of a particular area
+    name_str: name of the neighborhood for the saving to file
+    
+    Output
+    ---------
+    html file output of map
+    """
+    # Create a map centered in New York
+    m = folium.Map(location=[40.7306, -73.9352], zoom_start=12)
+
+    #creates two categories based on performancy
+    top_group = folium.FeatureGroup(name="Top Performers")
+    ntp_group = folium.FeatureGroup(name="Non Top Performers")
+
+    #gathers lat, long, and display data
+    for index, row in tp_df.iterrows():
+        location = [row['latitude'], row['longitude']]
+        popup_text = f"""Top Performing AirBnB In {row['neighbourhood_group']} --->
+        Number Of Reviews: {row['number_of_reviews']}, 
+        Reviews Per Month: {row['reviews_per_month']}, 
+        Price: ${row['price']} Per Night, 
+        Listing {row["listing"]}""" 
+
+        #Creates a green house icon at lat long symbolizing top performer and adds to top_group
+        folium.Marker(
+            location=location,
+            popup=folium.Popup(popup_text, min_width=300, max_width=500),
+            icon=folium.Icon(color='green', icon='home') # Custom icon/color
+            ).add_to(top_group)
+    
+    #gathers display data
+    for index, row in ntp_df.iterrows():
+        location = [row['latitude'], row['longitude']]
+        popup_text = f"""Standard {row['neighbourhood_group']} AirBnB --->
+        Number Of Reviews: {row['number_of_reviews']}, 
+        Reviews Per Month: {row['reviews_per_month']},
+        Price: ${row['price']} Per Night,
+        Listing {row["listing"]}"""
+
+        #Builds a marker of a red house icon at lat long symbolizing under performer and adds to ntp_group
+        folium.Marker(
+            location=location,
+            popup=folium.Popup(popup_text, min_width=300, max_width=500),
+            icon=folium.Icon(color='red', icon='home') # Custom icon/color
+        ).add_to(ntp_group)
+
+    #places groups on map
+    top_group.add_to(m)
+    ntp_group.add_to(m)
+
+    folium.LayerControl().add_to(m)
+    filename = '../output/ny_top_performers_' + name_str +'.html'
+    m.save(filename)
 
 if __name__ == "__main__":
 
@@ -213,13 +319,22 @@ if __name__ == "__main__":
     top_performers_staten_island, top_15_words_staten_island = get_top_performers_top_fifteen_words(staten_island_airbnb_df)
     top_performers_overall, top_15_words_overall = get_top_performers_top_fifteen_words(airbnb_df)
 
+    #retrieve non top performers for graphing purposes later
+    non_tp_bronx = get_non_top_performers(bronx_airbnb_df, top_performers_bronx)
+    non_tp_brooklyn = get_non_top_performers(brooklyn_airbnb_df, top_performers_brooklyn)
+    non_tp_manhattan = get_non_top_performers(manhattan_airbnb_df, top_performers_manhattan)
+    non_tp_queens = get_non_top_performers(queens_airbnb_df, top_performers_queens)
+    non_tp_staten_island = get_non_top_performers(staten_island_airbnb_df, top_performers_staten_island)
+    non_tp_overall = get_non_top_performers(airbnb_df, top_performers_overall)
+
+
     #Create the bar graphs for most common words in each neighborhood group
     make_bar_graph_word_counts(top_15_words_bronx, "Bronx")
     make_bar_graph_word_counts(top_15_words_brooklyn, "Brooklyn")
     make_bar_graph_word_counts(top_15_words_manhattan, "Manhattan")
-    make_bar_graph_word_counts(top_15_words_overall, "Overall In New York")
     make_bar_graph_word_counts(top_15_words_queens, "Queens")
     make_bar_graph_word_counts(top_15_words_staten_island, "Staten Island")
+    make_bar_graph_word_counts(top_15_words_overall, "Overall In New York")
 
     #Create scatter plots to see relationship between number ofreviews/price
     make_scatter_reviews_price(top_performers_bronx, "Bronx")
@@ -243,6 +358,12 @@ if __name__ == "__main__":
     make_scatter_price_availability(top_performers_queens, "Queens")
     make_scatter_price_availability(top_performers_manhattan, "Manhattan")
     make_scatter_price_availability(top_performers_staten_island, "Staten Island")
-    make_scatter_price_availability(top_performers_overall, "Overall")
+    make_scatter_price_availability(top_performers_overall, "Overall In New York")
 
-    
+    #Create Folium Maps that are sent to output folder for each neighborhood
+    make_ny_folium_map(non_tp_bronx, top_performers_bronx, "Bronx")
+    make_ny_folium_map(non_tp_brooklyn, top_performers_brooklyn, "Brooklyn")
+    make_ny_folium_map(non_tp_manhattan, top_performers_manhattan, "Manhattan")
+    make_ny_folium_map(non_tp_queens, top_performers_queens, "Queens")
+    make_ny_folium_map(non_tp_staten_island, top_performers_staten_island, "Staten Island")
+    make_ny_folium_map(non_tp_overall, top_performers_overall, "Overall_In_New_York")

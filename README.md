@@ -24,9 +24,21 @@
 
 # Overview
 
+Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. 
+
+There are many factors that go into running successful airbnb.
+
+The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year
+
 # Questions
 
+* What factors would make an AirBnB location have the highest chance to be the most profitable?
+* If I’m new to being an airbnb host, how should I go about setingt my price, choosing my listing?
+* What is realistic number of bookings that I can expect per month?
+
 # Cleaning
+
+
 
 # Visualization
 

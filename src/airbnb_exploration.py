@@ -4,6 +4,7 @@ import numpy as np
 import seaborn as sns
 import plotly.express as px
 import re
+import matplotlib.patches as mpatches
 
 #methods to remove punctuation re more efficient
 def remove_punctuation(text):
@@ -131,7 +132,14 @@ def make_scatter_reviews_price(df, name_str):
     series: Series that has information about top 15 most common words
     name_str: name of the Title for the graph 
     
-    """    
+    """
+    #Seperate Colors based on room type
+    color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
+    
+    #Create multiple legend bars that correspond to the colors of the bar
+    blue_patch = mpatches.Patch(color='blue', label='Private Room')
+    orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
+
     fig, axs = plt.subplots(figsize = (12,4))
     axs.scatter(df["price"], df["number_of_reviews"])
     axs.set_xlabel('Price Per Night In $')
@@ -141,6 +149,7 @@ def make_scatter_reviews_price(df, name_str):
     print("reviews,", df["number_of_reviews"].max())
     print("price,", df["price"].max())
     axs.set_title(f"Top Performers Price VS Number Of Review {name_str}")
+    plt.legend(handles=[blue_patch, orange_patch])
     plt.tight_layout()
     plt.show()
 
@@ -152,6 +161,25 @@ def make_scatter_price_availability(df, name_str):
     axs.set_yticks(range(0, df["price"].max()+100, 50))
     axs.set_xticks(range(0, df["availability_365"].max()+20, 20))
     axs.set_title(f" Price VS Availability {name_str}")
+    plt.tight_layout()
+    plt.show()
+
+def make_scatter_reviews_per_month_price(df, name_str):
+    #Seperate Colors based on room type
+    color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
+    
+    #Create multiple legend bars that correspond to the colors of the bar
+    blue_patch = mpatches.Patch(color='blue', label='Private Room')
+    orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
+    
+    fig, axs = plt.subplots(figsize = (12,4))
+    axs.scatter(df["price"], df["reviews_per_month"], color=color_array)
+    axs.set_xlabel('Price Per Night In $')
+    axs.set_ylabel('Number 0f Monthly Reviews')
+    axs.set_xticks(range(0, df["price"].max()+100, 50))
+    axs.set_yticks(range(0, int(df["reviews_per_month"].max())+6, 3))
+    axs.set_title(f"Top Performers Price VS Monthly Reviews {name_str}")
+    plt.legend(handles=[blue_patch, orange_patch])
     plt.tight_layout()
     plt.show()
 
@@ -200,6 +228,14 @@ if __name__ == "__main__":
     make_scatter_reviews_price(top_performers_queens, "Queens")
     make_scatter_reviews_price(top_performers_staten_island, "Staten Island")
     make_scatter_reviews_price(top_performers_overall, "Overall In New York")
+
+    #Create scatter plots to see relationship between reviews per month/availability
+    make_scatter_reviews_per_month_price(top_performers_bronx, "Bronx")
+    make_scatter_reviews_per_month_price(top_performers_brooklyn, "Brooklyn")
+    make_scatter_reviews_per_month_price(top_performers_manhattan, "Manhattan")
+    make_scatter_reviews_per_month_price(top_performers_queens, "Queens")
+    make_scatter_reviews_per_month_price(top_performers_staten_island, "Staten Island")
+    make_scatter_reviews_per_month_price(top_performers_overall, "Overall In New York")
 
     #Create scatter plots to see relationship between price/availabilty
     make_scatter_price_availability(top_performers_bronx, "Bronx")

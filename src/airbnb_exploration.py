@@ -285,6 +285,19 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
     ntp_group.add_to(m)
 
     folium.LayerControl().add_to(m)
+    
+    # Custom HTML for the legend
+    legend_html = """
+    <div style="position: fixed;
+            bottom: 50px; left: 50px; width: 150px; height: 100px;                
+            border:2px solid grey; z-index:9999; font-size:14px;
+            background-color:white; opacity:0.9;">
+      &nbsp; <b>Legend</b> <br>
+      &nbsp; <i class="fa fa-home fa-lg" style="color:red;"></i>&nbsp; Standard <br>
+      &nbsp; <i class="fa fa-home fa-lg" style="color:green;"></i>&nbsp; Top Performers <br>
+    </div>
+    """
+
     filename = '../output/ny_top_performers_' + name_str +'.html'
     m.save(filename)
 
@@ -358,10 +371,10 @@ if __name__ == "__main__":
     make_scatter_price_availability(top_performers_staten_island, "Staten Island")
     make_scatter_price_availability(top_performers_overall, "Overall In New York")
 
-    #Create Folium Maps that are sent to output folder for each neighborhood
+    #Create Folium Maps that are sent to output folder for each neighborhood but not displayed on github repo
     make_ny_folium_map(non_tp_bronx, top_performers_bronx, "Bronx")
     make_ny_folium_map(non_tp_brooklyn, top_performers_brooklyn, "Brooklyn")
     make_ny_folium_map(non_tp_manhattan, top_performers_manhattan, "Manhattan")
     make_ny_folium_map(non_tp_queens, top_performers_queens, "Queens")
     make_ny_folium_map(non_tp_staten_island, top_performers_staten_island, "Staten Island")
-    #make_ny_folium_map(non_tp_overall, top_performers_overall, "Overall_In_New_York") #very large file long time to open but would work
+    make_ny_folium_map(non_tp_overall, top_performers_overall, "Overall_In_New_York")

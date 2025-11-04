@@ -168,8 +168,6 @@ def make_scatter_reviews_price(df, name_str):
     axs.set_ylabel('Number 0f Reviews (Total)')
     axs.set_xticks(range(0, df["price"].max()+100, 50))
     axs.set_yticks(range(0, df["number_of_reviews"].max()+100, 50))
-    print("reviews,", df["number_of_reviews"].max())
-    print("price,", df["price"].max())
     axs.set_title(f"Top Performers Price VS Number Of Review {name_str}")
     plt.legend(handles=[blue_patch, orange_patch])
     plt.tight_layout()

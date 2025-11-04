@@ -7,7 +7,7 @@
 
 2. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
 
-3. [Cleaning](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#cleaning)
+3. [The Data](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#the-data)
 
 4. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
 
@@ -24,19 +24,17 @@
 
 # Overview
 
-Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. 
-
-There are many factors that go into running successful airbnb.
+Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. Airbnb allows hosts to set their price, availability, decide whether to rent their whole home or just a single room as well as decide on what listing name they want for their property.
 
 The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year
 
 # Questions
 
 * What factors would make an AirBnB location have the highest chance to be the most profitable?
-* If I’m new to being an airbnb host, how should I go about setingt my price, choosing my listing?
-* What is realistic number of bookings that I can expect per month?
+* If I’m new to being an airbnb host or wanted to become on, how should I go about setting my price, choosing my listing?
+* What is a realistic number of bookings that I can expect per month?
 
-# Cleaning
+# The Data
 
 
 

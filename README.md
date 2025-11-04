@@ -5,9 +5,9 @@
 ## Table Of Contents
 1. [Overview](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#overview)
 
-2. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
+2. [The Data](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#the-data)
 
-3. [The Data](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#the-data)
+3. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
 
 4. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
 
@@ -28,15 +28,14 @@ Airbnb is an online marketplace that connects hosts offering short-to-long-term 
 
 The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year
 
+# The Data
+
+
 # Questions
 
 * What factors would make an AirBnB location have the highest chance to be the most profitable?
 * If I’m new to being an airbnb host or wanted to become on, how should I go about setting my price, choosing my listing?
 * What is a realistic number of bookings that I can expect per month?
-
-# The Data
-
-
 
 # Visualization
 

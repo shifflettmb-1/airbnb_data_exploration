@@ -39,7 +39,9 @@ For my visualization I wanted to look deeper at the top performers in the datase
 
 ## Listing
 
-For picking out a 
+When analysizing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
+
+
 
 
 ## Price vs Reviews

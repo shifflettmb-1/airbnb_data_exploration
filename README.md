@@ -98,14 +98,14 @@ These files allow for users to explore and compare real data (ex. Price, Listing
 
 # Conclusion
 
-Based on the data I recommend the for listing name the following:
+Based on the data I recommend the following for listing name:
 
 * Choose specific keywords for what you are offering like “private room”, “2-bedroom apt”
 * Mention local tourist attraction or airport if they are close by (Example 10 mins from JFK, LaGuardia - LGA, Times Square)
 * Mention pools or playgrounds nearby
 * Adding an adjective like “cozy”, “spacious” to help it stand out in listing
 
-Based on the data I recommend the for listing name the following:
+Based on the data I recommend the following for price setting:
 
 * Compare neighborhood of property to look for price that has most monthly reviews as starting point based on whether private room or entire home/apt
 * Lower prices tend to lead to more reviews (more bookings) 

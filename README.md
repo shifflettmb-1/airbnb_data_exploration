@@ -35,11 +35,13 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 
 There were three main focuses I had for this project. I wanted to see how listing name played apart in how likely the Airbnb would be to be booked (reviewed), how to determine an appropriate price for listing based on the market, and finally if I could display this data on a map to see what hidden geographical influences played a part in success of these hosts.
 
-For my visualization I wanted to look deeper at the top performers in the dataset, the listings that were in the top ten percent of total number of reviews as well as the top ten percent of monthly reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the top performers by region to see results. 
+For my visualization I wanted to look deeper at the top performers in the dataset, the listings that were in the top ten percent of total number of reviews as well as the top ten percent of monthly reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the top performers by region to see results. There were five distinct regions for this exploration which included the Bronx, Brooklyn, Manhattan, Queens, and Staten Island.
 
 ## Listing
 
 When analysizing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
+
+
 
 
 

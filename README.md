@@ -59,6 +59,7 @@ Whole Dataset
 Trends that we can gather from listing names is that good listing normally contain the type of listing. Such as private bedroom or apartment, adding in proximity to local attractions or airports is beneficial.
 Adding adjectives such as spacious, or cozy may slightly increase chance for the listing to stand out.
 
+[Back to Top](#Table-of-Contents)
 
 ## Price vs Reviews
 
@@ -86,6 +87,7 @@ Top Performers Overall
 From this data we can see that as one might suspect that entire homes are listed at higher price than private rooms. However an unexpected trend of top performers only booking 3 to 9 times per month on average.
 Looking at particular neighborhood regions, one can make observations. Brooklyn, for example, amjority of private rooms tend to average around $50 per night and the average home or apartment starts at $125 to $250 per night.
 
+[Back to Top](#Table-of-Contents)
 
 ## Graphical Map
 
@@ -95,6 +97,8 @@ Image taken from output html file stored locally using Folium Comparing Top Perf
 <img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
 These files allow for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves.
+
+[Back to Top](#Table-of-Contents)
 
 # Conclusion
 

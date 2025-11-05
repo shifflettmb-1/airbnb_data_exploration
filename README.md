@@ -9,18 +9,20 @@
 
 3. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
 
-     3.1[Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization-by-listing)
+   [Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization-by-listing)
 
-     3.2[Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
+   [Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
 
-     3.3[Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
+   [Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
 
 4. [Conclusion](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#conclusion)
 
 5. [Photo and Data Credits](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#photo-and-data-credits)
 
 
-
+1. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
+   - First nested list item
+     - Second nested list item
 
 
 # Overview
@@ -37,7 +39,9 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 
 # Visualization
 
-There were three main focuses I had for 
+There were three main focuses I had for this project. I wanted to see how listing name played apart in how likely the Airbnb would be to be booked (reviewed), how to determine an appropriate price for the market, and finally if I could display this data on a map to see what hidden geographical influences played a part in success of these hosts.
+
+
 
 ## Listing
 

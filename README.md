@@ -3,21 +3,14 @@
 
 
 ## Table Of Contents
-1. [Overview](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#overview)
-
-2. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
-
-3. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
-
-   [Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#listing)
-
-   [Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
-
-   [Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
-
-4. [Conclusion](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#conclusion)
-
-5. [Photo and Data Credits](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#photo-and-data-credits)
+- [Overview](#overview)
+- [Questions](#questions)
+- [Visualization](#visualization)
+  - [Listing](#listing)
+  - [Price vs Reviews](#price-vs-reviews)
+  - [Graphical Map](#graphical-map)
+- [Conclusion](#conclusion)
+- [Photo and Data Credits](#photo-and-data-credits)
 
 # Overview
 

@@ -5,18 +5,19 @@
 ## Table Of Contents
 1. [Overview](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#overview)
 
-2. [The Data](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#the-data)
+2. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
 
-3. [Questions](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#questions)
+3. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
 
-4. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
+   -[Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization-by-listing)
 
-5. [Conclusion](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#conclusion)
+   -[Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
 
-6. [Photo and Data Credits](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#photo-and-data-credits)
+   -[Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
 
+4. [Conclusion](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#conclusion)
 
-
+5. [Photo and Data Credits](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#photo-and-data-credits)
 
 
 
@@ -24,12 +25,9 @@
 
 # Overview
 
-Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. Airbnb allows hosts to set their price, availability, decide whether to rent their whole home or just a single room as well as decide on what listing name they want for their property.
+Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. Airbnb allows hosts to set their price, availability, decide whether to rent their whole home or just a single room as well as decide on what listing name they want for their property. This exploration is for educational purposes only and meant to see what can be discovered through diving deeper into the data.
 
-The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year
-
-# The Data
-
+The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year. The analysis is based on data collected from the public Airbnb platform that is verified, aggregated and publicly available.
 
 # Questions
 
@@ -38,6 +36,10 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 * What is a realistic number of bookings that I can expect per month?
 
 # Visualization
+
+There were three main focuses I had for 
+
+
 
 # Conclusion
 

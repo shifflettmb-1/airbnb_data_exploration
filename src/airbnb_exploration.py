@@ -222,6 +222,43 @@ def make_scatter_reviews_per_month_price(df, name_str):
     plt.tight_layout()
     plt.show()
 
+def combine_scatters_reviews_price(df, name_str):
+    """ 
+    Creates a scatter plot showing relationship between
+    Reviews and price side by side with reviews per month and
+    price.
+
+    Parameters
+    ----------
+    df: Dataframe of airbnb data
+    name_str: string for the name of the Title for the graph
+    """    
+    #Seperate Colors based on room type
+    color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
+    
+    #Create multiple legend bars that correspond to the colors of the bar
+    blue_patch = mpatches.Patch(color='blue', label='Private Room')
+    orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
+
+    fig, axs = plt.subplots(1,2,figsize = (14,4))
+    axs[0].scatter(df["price"], df["number_of_reviews"], color=color_array)
+    axs[0].set_xlabel('Price Per Night In $')
+    axs[0].set_ylabel('Number 0f Reviews (Total)')
+    axs[0].set_xticks(range(0, df["price"].max()+100, 50))
+    axs[0].set_yticks(range(0, df["number_of_reviews"].max()+100, 50))
+    axs[0].set_title(f"Top Performers Price VS Total Reviews {name_str}")
+    axs[0].legend(handles=[blue_patch, orange_patch])
+
+    axs[1].scatter(df["price"], df["reviews_per_month"], color=color_array)
+    axs[1].set_xlabel('Price Per Night In $')
+    axs[1].set_ylabel('Number 0f Monthly Reviews')
+    axs[1].set_xticks(range(0, df["price"].max()+100, 50))
+    axs[1].set_yticks(range(0, int(df["reviews_per_month"].max())+6, 3))
+    axs[1].set_title(f"Top Performers Price VS Monthly Reviews {name_str}")
+    axs[1].legend(handles=[blue_patch, orange_patch])
+    plt.tight_layout()
+    plt.show()
+
 def make_ny_folium_map(ntp_df, tp_df, name_str):
     """ 
     Create a folium map with lat, long data from the two dataframes.
@@ -347,7 +384,7 @@ if __name__ == "__main__":
     make_bar_graph_word_counts(top_15_words_staten_island, "Staten Island")
     make_bar_graph_word_counts(top_15_words_overall, "Overall In New York")
 
-    #Create scatter plots to see relationship between number ofreviews/price
+    #Create scatter plots to see relationship between number of reviews/price
     make_scatter_reviews_price(top_performers_bronx, "Bronx")
     make_scatter_reviews_price(top_performers_brooklyn, "Brooklyn")
     make_scatter_reviews_price(top_performers_manhattan, "Manhattan")
@@ -362,6 +399,16 @@ if __name__ == "__main__":
     make_scatter_reviews_per_month_price(top_performers_queens, "Queens")
     make_scatter_reviews_per_month_price(top_performers_staten_island, "Staten Island")
     make_scatter_reviews_per_month_price(top_performers_overall, "Overall In New York")
+
+    #Creates scatter plots to see relationship between number of reviews/price
+    #Creates scatter plots to see relationship between reviews per month/availability
+    #Side by side for comparison purposes
+    combine_scatters_reviews_price(top_performers_bronx, "Bronx")
+    combine_scatters_reviews_price(top_performers_brooklyn, "Brooklyn")
+    combine_scatters_reviews_price(top_performers_manhattan, "Manhattan")
+    combine_scatters_reviews_price(top_performers_queens, "Queens")
+    combine_scatters_reviews_price(top_performers_staten_island, "Staten Island")
+    combine_scatters_reviews_price(top_performers_overall, "Overall In New York")
 
     #Create scatter plots to see relationship between price/availabilty
     make_scatter_price_availability(top_performers_bronx, "Bronx")

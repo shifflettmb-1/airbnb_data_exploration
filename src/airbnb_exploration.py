@@ -135,6 +135,7 @@ def make_bar_graph_word_counts(series, name_str):
     name_str: name of the Title for the graph 
     
     """
+    #creates horizontal bar graph, set labels, title
     fig, axs = plt.subplots(figsize = (12,4))
     axs.barh(series.index, series.values, color = "lightblue", edgecolor = "black")
     axs.set_xlabel('Top 15 Words')
@@ -162,6 +163,7 @@ def make_scatter_reviews_price(df, name_str):
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
 
+    #creates scatterplot, set labels, tickmarks, title, legend
     fig, axs = plt.subplots(figsize = (12,4))
     axs.scatter(df["price"], df["number_of_reviews"], color=color_array)
     axs.set_xlabel('Price Per Night In $')
@@ -183,7 +185,8 @@ def make_scatter_price_availability(df, name_str):
     df: Dataframe that has airbnb information
     name_str: string for the name of the Title for the graph 
     
-    """    
+    """
+    #creates scatterplot, set labels, tickmarks, title, legend    
     fig, axs = plt.subplots(figsize = (12,4))
     axs.scatter(df["availability_365"], df["price"], color="brown")
     axs.set_xlabel('Number 0f Days Available Per Year')
@@ -211,6 +214,7 @@ def make_scatter_reviews_per_month_price(df, name_str):
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
     
+    #creates scatterplot, set labels, tickmarks, title, legend
     fig, axs = plt.subplots(figsize = (12,4))
     axs.scatter(df["price"], df["reviews_per_month"], color=color_array)
     axs.set_xlabel('Price Per Night In $')
@@ -240,6 +244,7 @@ def combine_scatters_reviews_price(df, name_str):
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
 
+    #creates scatterplot, set labels, tickmarks, title, legend for number of reviews vs price to axs[0] for side by side
     fig, axs = plt.subplots(1,2,figsize = (14,4))
     axs[0].scatter(df["price"], df["number_of_reviews"], color=color_array)
     axs[0].set_xlabel('Price Per Night In $')
@@ -249,6 +254,7 @@ def combine_scatters_reviews_price(df, name_str):
     axs[0].set_title(f"Top Performers Price VS Total Reviews {name_str}")
     axs[0].legend(handles=[blue_patch, orange_patch])
 
+    #creates scatterplot, set labels, tickmarks, title, legend for review per month vs price to axs[1] for side by side
     axs[1].scatter(df["price"], df["reviews_per_month"], color=color_array)
     axs[1].set_xlabel('Price Per Night In $')
     axs[1].set_ylabel('Number 0f Monthly Reviews')
@@ -294,14 +300,14 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         Price: ${row['price']} Per Night, 
         Listing {row["listing"]}""" 
 
-        #Creates a green house icon at lat long symbolizing top performer and adds to top_group
+        #Builds a green house icon at lat long symbolizing top performer and adds to top_group
         folium.Marker(
             location=location,
             popup=folium.Popup(popup_text, min_width=300, max_width=500),
             icon=folium.Icon(color='green', icon='home') # Custom icon/color
             ).add_to(top_group)
     
-    #gathers display data
+    #gathers lat, long, and display data
     for index, row in ntp_df.iterrows():
         location = [row['latitude'], row['longitude']]
         popup_text = f"""Standard {row['neighbourhood_group']} AirBnB --->
@@ -310,7 +316,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         Price: ${row['price']} Per Night,
         Listing {row["listing"]}"""
 
-        #Builds a marker of a red house icon at lat long symbolizing under performer and adds to ntp_group
+        #Builds a marker of a red house icon at lat long symbolizing standard performer and adds to ntp_group
         folium.Marker(
             location=location,
             popup=folium.Popup(popup_text, min_width=300, max_width=500),
@@ -334,8 +340,13 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
       &nbsp; <i class="fa fa-home fa-lg" style="color:green;"></i>&nbsp; Top Performers <br>
     </div>
     """
+    #adds the legend to the map
+    m.get_root().html.add_child(folium.Element(legend_html))
 
+    #filename for output
     filename = '../output/ny_top_performers_' + name_str +'.html'
+    
+    #saves map to the file path
     m.save(filename)
 
 if __name__ == "__main__":

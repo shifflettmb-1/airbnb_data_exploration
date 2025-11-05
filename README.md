@@ -39,11 +39,28 @@ For my visualization I wanted to look deeper at the top performers in the datase
 
 ## Listing
 
-When analysizing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
+When analysizing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results. 
 
+Bronx
+<img width="1189" height="390" alt="common_words_bronx" src="https://github.com/user-attachments/assets/2ecdbdea-520a-4036-85a9-4b9aa7fa303b" />
 
+Brooklyn
+<img width="1189" height="390" alt="common_words_brooklyn" src="https://github.com/user-attachments/assets/775924fa-d626-4ad5-a60a-d41bd3a1e75e" />
 
+Manhattan
+<img width="1189" height="390" alt="common_words_manhattan" src="https://github.com/user-attachments/assets/fb651a84-af48-41f6-a953-d099ec610767" />
 
+Queens
+<img width="1189" height="390" alt="common_words_queens" src="https://github.com/user-attachments/assets/245c040f-f7f3-4b75-85de-12df16e5af1f" />
+
+Staten Island
+<img width="1189" height="390" alt="common_words_staten_island" src="https://github.com/user-attachments/assets/e246d203-f53b-4b12-85d8-1945ddc1f10a" />
+
+Top Performers Overall
+<img width="1189" height="390" alt="common_words_overall" src="https://github.com/user-attachments/assets/00d1eeac-1e1c-4d15-85e8-f3c205e4acd5" />
+
+Whole Dataset
+<img width="1189" height="390" alt="common_words_whole" src="https://github.com/user-attachments/assets/db29af17-ba78-4971-b4a8-85ab9d9c0f2b" />
 
 
 ## Price vs Reviews

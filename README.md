@@ -35,7 +35,7 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 
 There were three main focuses I had for this project. I wanted to see how listing name played apart in how likely the Airbnb would be to be booked (reviewed), how to determine an appropriate price for listing based on the market, and finally if I could display this data on a map to see what hidden geographical influences played a part in success of these hosts.
 
-For my visualization I wanted to look deeper at the top performers in the dataset, the listings that were in the top ten percent of total number of reviews as well as the top ten percent of monthly reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the top performers by region to see results. There were five distinct regions for this exploration which included the Bronx, Brooklyn, Manhattan, Queens, and Staten Island.
+For my visualization I wanted to look deeper at the top performers in the dataset, the listings that were in the Top 10 percent of total number of reviews AND the Top 10 percent of monthly reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the top performers by region to see results. There were five distinct regions for this exploration which included the Bronx, Brooklyn, Manhattan, Queens, and Staten Island.
 
 ## Listing
 
@@ -54,7 +54,7 @@ Manhattan
 Queens
 <img width="1189" height="390" alt="common_words_queens" src="https://github.com/user-attachments/assets/245c040f-f7f3-4b75-85de-12df16e5af1f" />
 
-Staten Island
+Staten Island (limited amount of active top performers from Staten Island)
 <img width="1189" height="390" alt="common_words_staten_island" src="https://github.com/user-attachments/assets/e246d203-f53b-4b12-85d8-1945ddc1f10a" />
 
 Top Performers Overall
@@ -84,7 +84,7 @@ Manhattan
 Queens
 <img width="1390" height="390" alt="price_vs_reviews_queens" src="https://github.com/user-attachments/assets/f6942fec-7231-43e6-8f3f-0a23d8136a39" />
 
-Staten Island
+Staten Island (limited amount of active top performers from Staten Island)
 <img width="1390" height="390" alt="price_vs_reviews_staten_island" src="https://github.com/user-attachments/assets/48d738be-d860-40f6-bfe8-00dc2357a0b3" />
 
 Top Performers Overall
@@ -101,7 +101,7 @@ The last visual I wanted to display for the dataset was map for each particular 
 Image taken from output html file stored locally using Folium Comparing Top Performers and Standard Performer In Bronx
 <img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
-These files for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves.
+These files allow for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves.
 
 # Conclusion
 

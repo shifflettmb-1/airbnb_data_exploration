@@ -39,7 +39,8 @@ For my visualization I wanted to look deeper at the top performers in the datase
 
 ## Listing
 
-When analysizing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results. 
+When analyzing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
+Results are shown below.
 
 Bronx
 <img width="1189" height="390" alt="common_words_bronx" src="https://github.com/user-attachments/assets/2ecdbdea-520a-4036-85a9-4b9aa7fa303b" />
@@ -62,10 +63,14 @@ Top Performers Overall
 Whole Dataset
 <img width="1189" height="390" alt="common_words_whole" src="https://github.com/user-attachments/assets/db29af17-ba78-4971-b4a8-85ab9d9c0f2b" />
 
-Trends that we can gather from listing names is that good listing normally offer
+Trends that we can gather from listing names is that good listing normally contain the type of listing. Such as private bedroom or apartment, adding in proximity to local attractions or airports is beneficial.
+Adding adjectives such as spacious, or cozy may slightly increase chance for the listing to stand out.
 
 
 ## Price vs Reviews
+
+When analyzing the price comparison to the number of total and monthly reviews, one must consider the difference in the listing. Is the listing a single private room or is the entire house or apartment available for short-term lease?
+Results are shown below.
 
 Bronx
 <img width="1390" height="390" alt="price_vs_reviews_bronx" src="https://github.com/user-attachments/assets/cbec55af-51fe-47cb-890f-e65280544941" />
@@ -85,12 +90,33 @@ Staten Island
 Top Performers Overall
 <img width="1390" height="390" alt="price_vs_reviews_overall" src="https://github.com/user-attachments/assets/9ef0d1b3-04d5-4e44-a972-c5171cab51e0" />
 
+From this data we can see that as one might suspect that entire homes are listed at higher price than private rooms. However an unexpected trend of top performers only booking 3 to 9 times per month on average.
+Looking at particular neighborhood regions, one can make observations. Brooklyn, for example, amjority of private rooms tend to average around $50 per night and the average home or apartment starts at $125 to $250 per night.
+
 
 ## Graphical Map
 
+The last visual I wanted to display for the dataset was map for each particular neighborhood region. Each map contains green and red house based on the locational data. The green house signifies that the listing is a top performer in the area while the red house signifies that the listing is a standard performer outside the top 10 percent. The image below brief example of what is displayed in the html file generated from the code.
+
+Image taken from output html file stored locally using Folium Comparing Top Performers and Standard Performer In Bronx
 <img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
+These files for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves.
+
 # Conclusion
+
+Based on the data I recommend the for listing name the following:
+   -Choose specific keywords for what you are offering like “private room”, “2-bedroom apt”
+   -Mention local tourist attraction or airport if they are close by (Example 10 mins from JFK, LaGuardia - LGA, Times Square)
+   -Mention pools or playgrounds nearby
+   -Adding an adjective like “cozy”, “spacious” to help it stand out in listing
+
+Based on the data I recommend the for listing name the following:
+   -compare neighborhood of property to look for price that has most monthly reviews as starting point based on whether private room or entire home/apt
+   -lower prices tend to lead to more reviews (more bookings) 
+
+Bookings To Expect:
+-Some areas top performers only average 3 to 9 bookings per month so it would be important have realistic expectations
 
 # Photo and Data Credits
 I did not create nor do I own any images/data from airbnb nor am I affliated with airbnb

@@ -91,12 +91,12 @@ Looking at particular neighborhood regions, one can make other observations. Bro
 
 ## Graphical Map
 
-The last visual I wanted to display for the dataset was map for each particular neighborhood region. Each map contains green and red house based on the locational data. The green house signifies that the listing is a top performer in the area while the red house signifies that the listing is a standard performer outside the top 10 percent. The image below brief example of what is displayed in the html file generated from the code.
+For each particular neighborhood region I chose to display a map of all the airbnb listing for that area. Each map contains green and red house based on the locational data. The green house signifies that the listing is a top performer in the area while the red house signifies that the listing is a standard performer outside the top 10 percent. The image below is a brief example of what is displayed in the html file generated from the code.
 
 Image taken from output html file stored locally using Folium Comparing Top Performers and Standard Performer In Bronx
 <img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
-These files allow for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves.
+These files allow for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves. It also could potentially see things that might have been overlooked like proximity to the zoo or playground in the area. The things that might intice potential clients.
 
 [Back to Top](#Table-of-Contents)
 

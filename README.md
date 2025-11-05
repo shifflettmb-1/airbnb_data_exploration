@@ -9,11 +9,11 @@
 
 3. [Visualization](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization)
 
-   -[Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization-by-listing)
+   *[Listing](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#visualization-by-listing)
 
-   -[Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
+   *[Price vs Reviews](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#price-vs-reviews)
 
-   -[Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
+   *[Graphical Map](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#graphical-map)
 
 4. [Conclusion](https://github.com/shifflettmb-1/airbnb_data_exploration/blob/main/README.md#conclusion)
 

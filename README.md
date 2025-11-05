@@ -107,19 +107,19 @@ These files for users to explore and compare real data (ex. Price, Listing, Name
 
 Based on the data I recommend the for listing name the following:
 
-*Choose specific keywords for what you are offering like “private room”, “2-bedroom apt”
-*Mention local tourist attraction or airport if they are close by (Example 10 mins from JFK, LaGuardia - LGA, Times Square)
-*Mention pools or playgrounds nearby
-*Adding an adjective like “cozy”, “spacious” to help it stand out in listing
+* Choose specific keywords for what you are offering like “private room”, “2-bedroom apt”
+* Mention local tourist attraction or airport if they are close by (Example 10 mins from JFK, LaGuardia - LGA, Times Square)
+* Mention pools or playgrounds nearby
+* Adding an adjective like “cozy”, “spacious” to help it stand out in listing
 
 Based on the data I recommend the for listing name the following:
 
-*compare neighborhood of property to look for price that has most monthly reviews as starting point based on whether private room or entire home/apt
-*lower prices tend to lead to more reviews (more bookings) 
+* Compare neighborhood of property to look for price that has most monthly reviews as starting point based on whether private room or entire home/apt
+* Lower prices tend to lead to more reviews (more bookings) 
 
 Bookings To Expect:
 
-*Some areas top performers only average 3 to 9 bookings per month so it would be important have realistic expectations
+* Some areas Top Performers only average 3 to 9 bookings per month so it would be important have realistic expectations
 
 # Photo and Data Credits
 I did not create nor do I own any images/data from airbnb nor am I affliated with airbnb

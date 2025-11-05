@@ -403,7 +403,7 @@ if __name__ == "__main__":
     make_scatter_reviews_price(top_performers_staten_island, "Staten Island")
     make_scatter_reviews_price(top_performers_overall, "Overall In New York")
 
-    #Create scatter plots to see relationship between reviews per month/availability
+    #Create scatter plots to see relationship between reviews per month/price
     make_scatter_reviews_per_month_price(top_performers_bronx, "Bronx")
     make_scatter_reviews_per_month_price(top_performers_brooklyn, "Brooklyn")
     make_scatter_reviews_per_month_price(top_performers_manhattan, "Manhattan")
@@ -412,7 +412,7 @@ if __name__ == "__main__":
     make_scatter_reviews_per_month_price(top_performers_overall, "Overall In New York")
 
     #Creates scatter plots to see relationship between number of reviews/price
-    #Creates scatter plots to see relationship between reviews per month/availability
+    #Creates scatter plots to see relationship between reviews per month/price
     #Side by side for comparison purposes
     combine_scatters_reviews_price(top_performers_bronx, "Bronx")
     combine_scatters_reviews_price(top_performers_brooklyn, "Brooklyn")

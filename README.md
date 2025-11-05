@@ -39,7 +39,11 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 
 There were three main focuses I had for 
 
+## Listing
 
+## Price vs Reviews
+
+## Graphical Map
 
 # Conclusion
 

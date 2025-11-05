@@ -62,10 +62,33 @@ Top Performers Overall
 Whole Dataset
 <img width="1189" height="390" alt="common_words_whole" src="https://github.com/user-attachments/assets/db29af17-ba78-4971-b4a8-85ab9d9c0f2b" />
 
+Trends that we can gather from listing names is that good listing normally offer
+
 
 ## Price vs Reviews
 
+Bronx
+<img width="1390" height="390" alt="price_vs_reviews_bronx" src="https://github.com/user-attachments/assets/cbec55af-51fe-47cb-890f-e65280544941" />
+
+Brooklyn
+<img width="1390" height="390" alt="price_vs_reviews_brooklyn" src="https://github.com/user-attachments/assets/2e3d6111-5963-4e25-8d6e-d8930df7fd6f" />
+
+Manhattan
+<img width="1390" height="390" alt="price_vs_reviews_manhattan" src="https://github.com/user-attachments/assets/7e493367-4eb2-47b2-98ea-8c3592579ce7" />
+
+Queens
+<img width="1390" height="390" alt="price_vs_reviews_queens" src="https://github.com/user-attachments/assets/f6942fec-7231-43e6-8f3f-0a23d8136a39" />
+
+Staten Island
+<img width="1390" height="390" alt="price_vs_reviews_staten_island" src="https://github.com/user-attachments/assets/48d738be-d860-40f6-bfe8-00dc2357a0b3" />
+
+Top Performers Overall
+<img width="1390" height="390" alt="price_vs_reviews_overall" src="https://github.com/user-attachments/assets/9ef0d1b3-04d5-4e44-a972-c5171cab51e0" />
+
+
 ## Graphical Map
+
+<img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
 # Conclusion
 

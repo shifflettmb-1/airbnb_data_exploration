@@ -16,7 +16,7 @@
 
 Airbnb is an online marketplace that connects hosts offering short-to-long-term stays, experiences, and services with guests worldwide. The company operates on a peer-to-peer model, allowing individuals to rent out a wide variety of properties like private rooms, entire houses or apartments, and even unique spaces like castles. Airbnb allows hosts to set their price, availability, decide whether to rent their whole home or just a single room as well as decide on what listing name they want for their property. This exploration is for educational purposes only and meant to see what can be discovered through diving deeper into the data.
 
-The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year. The analysis is based on data collected from the public Airbnb platform that is verified, aggregated and publicly available.
+The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data) and contains information of close to 50,000 hosts during the 2019 calendar year. The analysis is based on data collected from the public Airbnb platform that is verified, aggregated and publicly available. Airbnb information where total number of reviews or reviews per month were unknown were not include in the analysis portion.
 
 # Questions
 

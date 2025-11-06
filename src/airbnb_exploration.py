@@ -298,7 +298,8 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         popup_text = f"""Top Performing AirBnB In {row['neighbourhood_group']} --->
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']}, 
-        Price: ${row['price']} Per Night, 
+        Price: ${row['price']} Per Night,
+        Type: {row['room_type']}, 
         Listing: {row["listing"]}""" 
 
         #Builds a green house icon at lat long symbolizing top performer and adds to top_group
@@ -315,6 +316,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']},
         Price: ${row['price']} Per Night,
+        Type: {row['room_type']},
         Listing: {row["listing"]}"""
 
         #Builds a marker of a red house icon at lat long symbolizing standard performer and adds to ntp_group

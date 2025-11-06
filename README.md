@@ -113,6 +113,7 @@ Based on the data I recommend the following for listing name:
 
 Based on the data I recommend the following for price setting:
 
+* Is it a private room? entire home?
 * Compare neighborhood of property to look for price that has most monthly reviews as starting point based on whether private room or entire home/apt
 * Lower prices tend to lead to more reviews (more bookings) 
 

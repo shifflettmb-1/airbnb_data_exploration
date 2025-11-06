@@ -32,7 +32,7 @@ For my visualization I wanted to look deeper at the top performers in the datase
 
 ## Listing
 
-When analyzing the listing names of the properties I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
+When analyzing the listing names of the Airbnb Hosts, I decided that common conjunctions and prepositions may not be too relevant for this context so I decided to remove them from the results.
 Results are shown below.
 
 Bronx
@@ -65,7 +65,7 @@ Whole Dataset
 
 ## Price vs Reviews
 
-When analyzing the price comparison to the number of total and monthly reviews, one must consider the difference in the listing. Is the listing a single private room or is the entire house or apartment available for short-term lease?
+When analyzing the Rrice Comparison to the Number of Total and Monthly Reviews it is important to consider the difference in the listing type. Is the listing a single private room or is the entire house or apartment available for short-term lease?
 Results are shown below.
 
 Bronx

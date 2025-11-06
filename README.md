@@ -113,7 +113,7 @@ Image taken from output html file stored locally using Folium Comparing Top Perf
 
 These files allow for users to explore and compare real data (ex. Price, Listing, Name, Reviews) for neighborhoods quickly and get a range of ideas of a starting point for becoming an airbnb host themselves. It also could potentially see things that might have been overlooked like proximity to the zoo or playground in the area. The things that might intice potential clients.
 
-> [!Note]
+> [!WARNING]
 > The HTML output files can get pretty large depending on the number of given airbnb host for the region
 
 [Back to Top](#Table-of-Contents)

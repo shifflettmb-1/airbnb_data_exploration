@@ -10,6 +10,18 @@ from folium.plugins import MarkerCluster
 
 #methods to remove punctuation re more efficient
 def remove_punctuation(text):
+    """ 
+    Removes punctuation from text using regular expression function
+    
+    Parameters
+    ----------
+    text: string
+    
+    Returns
+    -------
+    text without punctuation
+    
+    """   
     return re.sub(r'[^\w\s]', '',text)
 
 # method that finds top ten percent of reviews overall and per month
@@ -40,9 +52,11 @@ def get_top_fifteen_words(df):
     """ 
     Retrieves the top fifteen most common words (excluding stopwords)
     
-    remove cases and punctuation from listing creating a new column in def
+    Remove cases and punctuation from listing creating a new column in def
     called listing processed. Then take the listing processed column and 
-    expands into a single column of strings. Then 
+    expands into a single column of strings. Then get value counts.
+    Remove stopwords from consideration. Sort the counts in descending order.
+    Return top 15.
 
 
     Parameters
@@ -54,13 +68,22 @@ def get_top_fifteen_words(df):
     top_15_words: Series of the 15 most common words (index) and their count (values)
 
     """
-
+    #removes punctuation
     df.loc[:,"listing_processed"] = df["listing"].str.lower().apply(remove_punctuation)
+    
+    #stacks all the words in listing_processed into a Panda Series
     all_words = df["listing_processed"].str.split(expand=True).stack()
-    #records the value_counts of each word
+
+    #records the value_counts of each word as a Series
     word_counts = all_words.value_counts()
+    
+    #applies the remove_stop_words() functions on the word_counts Series
     word_counts = pd.DataFrame(word_counts).apply(remove_stop_words, axis=1)
+
+    #sorts the word counts Series in descending order
     sorted_word_counts = word_counts.sort_values(ascending=False)
+    
+    #retrieves top 15 words
     top_15_words = sorted_word_counts.head(15)
     return top_15_words
 
@@ -68,7 +91,7 @@ def remove_stop_words(x):
     """ 
     Changes the count value to 0 if index is in stopwords
     to remove it from consideration as part of most common
-    due to the words being conjunctions
+    due to the words being conjunctions, prepositions
 
     Parameters
     ----------
@@ -159,7 +182,7 @@ def make_scatter_reviews_price(df, name_str):
     #Seperate Colors based on room type
     color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
     
-    #Create multiple legend bars that correspond to the colors of the bar
+    #Create handles for legend bars that correspond to the colors of the bar
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
 
@@ -218,7 +241,7 @@ def combine_scatters_reviews_price(df, name_str):
     #Seperate Colors based on room type
     color_array = np.where(df["room_type"] == "Private room", "blue", "orange")
     
-    #Create multiple legend bars that correspond to the colors of the bar
+    #Create handles for legend bars that correspond to the colors of the bar
     blue_patch = mpatches.Patch(color='blue', label='Private Room')
     orange_patch = mpatches.Patch(color='orange', label='Entire Home/Apt')
 

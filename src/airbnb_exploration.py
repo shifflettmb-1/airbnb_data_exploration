@@ -295,7 +295,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
     #gathers lat, long, and display data
     for index, row in tp_df.iterrows():
         location = [row['latitude'], row['longitude']]
-        popup_text = f"""Top Performing AirBnB In {row['neighbourhood_group']} --->
+        popup_text = f"""Top Performing AirBnB In {row['neighbourhood_group']},
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']}, 
         Price: ${row['price']} Per Night,
@@ -305,14 +305,14 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         #Builds a green house icon at lat long symbolizing top performer and adds to top_group
         folium.Marker(
             location=location,
-            popup=folium.Popup(popup_text, min_width=300, max_width=500),
+            popup=folium.Popup(popup_text, min_width=200, max_width=200),
             icon=folium.Icon(color='green', icon='home') # Custom icon/color
             ).add_to(top_group)
     
     #gathers lat, long, and display data
     for index, row in ntp_df.iterrows():
         location = [row['latitude'], row['longitude']]
-        popup_text = f"""Standard {row['neighbourhood_group']} AirBnB --->
+        popup_text = f"""Standard {row['neighbourhood_group']} AirBnB,
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']},
         Price: ${row['price']} Per Night,
@@ -322,7 +322,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         #Builds a marker of a red house icon at lat long symbolizing standard performer and adds to ntp_group
         folium.Marker(
             location=location,
-            popup=folium.Popup(popup_text, min_width=300, max_width=500),
+            popup=folium.Popup(popup_text, min_width=200, max_width=200),
             icon=folium.Icon(color='red', icon='home') # Custom icon/color
         ).add_to(ntp_group)
 

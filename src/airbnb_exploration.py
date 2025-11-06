@@ -175,28 +175,6 @@ def make_scatter_reviews_price(df, name_str):
     plt.tight_layout()
     plt.show()
 
-def make_scatter_price_availability(df, name_str):
-    """ 
-    Create scatterplot comparing the price per night
-    and availabilty
-
-    Parameters
-    ----------
-    df: Dataframe that has airbnb information
-    name_str: string for the name of the Title for the graph 
-    
-    """
-    #creates scatterplot, set labels, tickmarks, title, legend    
-    fig, axs = plt.subplots(figsize = (12,4))
-    axs.scatter(df["availability_365"], df["price"], color="brown")
-    axs.set_xlabel('Number 0f Days Available Per Year')
-    axs.set_ylabel('Price Per Night In $')
-    axs.set_yticks(range(0, df["price"].max()+100, 50))
-    axs.set_xticks(range(0, df["availability_365"].max()+20, 20))
-    axs.set_title(f" Price VS Availability {name_str}")
-    plt.tight_layout()
-    plt.show()
-
 def make_scatter_reviews_per_month_price(df, name_str):
     """ 
     Creates a scatter plot showing relationship between
@@ -421,15 +399,7 @@ if __name__ == "__main__":
     combine_scatters_reviews_price(top_performers_staten_island, "Staten Island")
     combine_scatters_reviews_price(top_performers_overall, "Overall In New York")
 
-    #Create scatter plots to see relationship between price/availabilty
-    make_scatter_price_availability(top_performers_bronx, "Bronx")
-    make_scatter_price_availability(top_performers_brooklyn, "Brooklyn")
-    make_scatter_price_availability(top_performers_queens, "Queens")
-    make_scatter_price_availability(top_performers_manhattan, "Manhattan")
-    make_scatter_price_availability(top_performers_staten_island, "Staten Island")
-    make_scatter_price_availability(top_performers_overall, "Overall In New York")
-
-    #Create Folium Maps that are sent to output folder for each neighborhood but not displayed on github repo
+    #Create Folium Maps that are sent to output folder for each neighborhood
     make_ny_folium_map(non_tp_bronx, top_performers_bronx, "Bronx")
     make_ny_folium_map(non_tp_brooklyn, top_performers_brooklyn, "Brooklyn")
     make_ny_folium_map(non_tp_manhattan, top_performers_manhattan, "Manhattan")

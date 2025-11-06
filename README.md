@@ -146,3 +146,5 @@ I did not create nor do I own any images/data from airbnb nor am I affliated wit
 Using this information as a basis for creating an airbnb listing doesn't guarantee success or failure.
 
 This data can be accessed from [here](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/data)
+
+The coding for this repo can be found [here](https://github.com/shifflettmb-1/airbnb_data_exploration/tree/main/src)

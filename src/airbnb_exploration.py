@@ -299,7 +299,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']}, 
         Price: ${row['price']} Per Night, 
-        Listing {row["listing"]}""" 
+        Listing: {row["listing"]}""" 
 
         #Builds a green house icon at lat long symbolizing top performer and adds to top_group
         folium.Marker(
@@ -315,7 +315,7 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
         Number Of Reviews: {row['number_of_reviews']}, 
         Reviews Per Month: {row['reviews_per_month']},
         Price: ${row['price']} Per Night,
-        Listing {row["listing"]}"""
+        Listing: {row["listing"]}"""
 
         #Builds a marker of a red house icon at lat long symbolizing standard performer and adds to ntp_group
         folium.Marker(

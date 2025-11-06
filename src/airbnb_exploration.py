@@ -296,8 +296,8 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
     for index, row in tp_df.iterrows():
         location = [row['latitude'], row['longitude']]
         popup_text = f"""Top Performing AirBnB In {row['neighbourhood_group']},
-        Number Of Reviews: {row['number_of_reviews']}, 
-        Reviews Per Month: {row['reviews_per_month']}, 
+        Total Reviews: {row['number_of_reviews']}, 
+        Average RPM: {row['reviews_per_month']}, 
         Price: ${row['price']} Per Night,
         Type: {row['room_type']}, 
         Listing: {row["listing"]}""" 
@@ -313,8 +313,8 @@ def make_ny_folium_map(ntp_df, tp_df, name_str):
     for index, row in ntp_df.iterrows():
         location = [row['latitude'], row['longitude']]
         popup_text = f"""Standard {row['neighbourhood_group']} AirBnB,
-        Number Of Reviews: {row['number_of_reviews']}, 
-        Reviews Per Month: {row['reviews_per_month']},
+        Total Reviews: {row['number_of_reviews']}, 
+        Average RPM: {row['reviews_per_month']},
         Price: ${row['price']} Per Night,
         Type: {row['room_type']},
         Listing: {row["listing"]}"""

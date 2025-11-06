@@ -26,9 +26,9 @@ The dataset was pulled from [kaggle](https://www.kaggle.com/datasets/dgomonov/ne
 
 # Visualization
 
-There were three main focuses I had for this project. I wanted to see how listing name played a part in how likely an Airbnb would be booked (reviewed), how to determine an appropriate price for listing based on the market. Finally I wanted to display this data on a map to see if other influences played a part in success of these hosts.
+There were three main focuses I had for this project. First, I wanted to see how listing name played a part in how likely an Airbnb would be booked. Second based on market, determine an appropriate price for listings. Finally I wanted to display this data on a map to see if other influences played a part in success of these hosts.
 
-For my visualization I wanted to look deeper at the top performers in the dataset. "Top Performer" is refering to the listings that were in the Top 10 percent of total number of reviews AND the Top 10 percent of monthly reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the top performers by region to see results. There were five distinct regions for this exploration which included the Bronx, Brooklyn, Manhattan, Queens, and Staten Island. I also provided information on Top Performers Overall in New York for general insight.
+For my visualization I decided to look deeper at the Top Performers in the dataset. "Top Performer" is refering to the listings that were in the Top 10 percent of Total Number of Reviews AND the Top 10 percent of Monthly Reviews. Comparisons also needed to be geographically based, meaning I'm taking the data and breaking it down into the Top Performers by region to see results. There were five distinct regions for this exploration which included the Bronx, Brooklyn, Manhattan, Queens, and Staten Island. I also provided information on Top Performers Overall in New York for general insight.
 
 ## Listing
 

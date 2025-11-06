@@ -108,9 +108,9 @@ Top Performers Overall
 
 ## Graphical Map
 
-For each particular neighborhood region I chose to display a map of all the airbnb listing for that area. Each map contains green and red houses based on the locational data. The green house signifies that the listing is a Top Performer in the area while the red house signifies that the listing is a standard performer outside the top 10 percent. The image below is a brief example of what is displayed in the html files generated from the code. These output files are located [here](https://github.com/shifflettmb-1/airbnb_data_exploration/tree/main/output)
+For further analysis, I chose to display a map of all the airbnb listing for each region (Bronx, Brooklyn, Manhattan, Queens, Staten Island). Each map has either a Green or Red House at a current Airbnb host location. The Green House signifies that the listing is a Top Performer in the area while the Red House signifies that the listing is a standard performer outside the top 10 percent. The image below is a brief example of what is displayed in the html files generated from the code. These output files are located [here](https://github.com/shifflettmb-1/airbnb_data_exploration/tree/main/output)
 
-Image taken from output html file stored locally using Folium Comparing Top Performers and Standard Performer In Bronx
+Image taken from output html file using Folium Comparing Top Performers and Standard Performer In Bronx
 <img width="1419" height="841" alt="graphical map bronx" src="https://github.com/user-attachments/assets/4cc0fb87-2a24-4190-ab9f-6e154cf72741" />
 
 * These files allow for users to explore and compare real data for neighborhoods quickly (ex. Price, Listing, Name, Number of Reviews).

@@ -399,7 +399,7 @@ if __name__ == "__main__":
     combine_scatters_reviews_price(top_performers_staten_island, "Staten Island")
     combine_scatters_reviews_price(top_performers_overall, "Overall In New York")
 
-    #Create Folium Maps that are sent to output folder for each neighborhood
+    #Create NY Folium Maps that are sent to output folder for each neighborhood
     make_ny_folium_map(non_tp_bronx, top_performers_bronx, "Bronx")
     make_ny_folium_map(non_tp_brooklyn, top_performers_brooklyn, "Brooklyn")
     make_ny_folium_map(non_tp_manhattan, top_performers_manhattan, "Manhattan")

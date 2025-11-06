@@ -56,8 +56,10 @@ Top Performers Overall
 Whole Dataset
 <img width="1189" height="390" alt="common_words_whole" src="https://github.com/user-attachments/assets/db29af17-ba78-4971-b4a8-85ab9d9c0f2b" />
 
-Trends that we can gather from listing names is that good listing normally contain the type of listing. Such as private bedroom or apartment, adding in proximity to local attractions or airports is beneficial.
-Adding adjectives such as spacious, or cozy may slightly increase chance for the listing to stand out.
+### Trends
+* Good listing normally contain the type of listing (private room, 2-bedroom apartment
+* Adding in proximity to local attractions or airports is beneficial.
+* Adding adjectives such as spacious, or cozy may slightly increase chance for the listing to stand out.
 
 [Back to Top](#Table-of-Contents)
 
@@ -84,7 +86,7 @@ Staten Island (limited amount of active top performers from Staten Island)
 Top Performers Overall
 <img width="1390" height="390" alt="price_vs_reviews_overall" src="https://github.com/user-attachments/assets/9ef0d1b3-04d5-4e44-a972-c5171cab51e0" />
 
-### Results
+### Trends
 * Overall we see that the price of entire home listings are listed at a higher average price than single private rooms as might be expected.
   
 <ins>Top Performing Private Room Listings</ins>

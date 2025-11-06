@@ -102,7 +102,7 @@ Top Performers Overall
   * Staten Island average listing price ~$75-$125
 
 > [!Note]
-> Vast majority of Top Performers average only between 3 to 9 bookings per month based on the data. 
+> Majority of Top Performers average only between 3 to 9 bookings per month based on the data. 
 
 [Back to Top](#Table-of-Contents)
 

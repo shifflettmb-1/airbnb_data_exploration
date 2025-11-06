@@ -57,8 +57,8 @@ Whole Dataset
 <img width="1189" height="390" alt="common_words_whole" src="https://github.com/user-attachments/assets/db29af17-ba78-4971-b4a8-85ab9d9c0f2b" />
 
 ### Trends
-* Good listing normally contain the type of listing (private room, 2-bedroom apartment
-* Adding in proximity to local attractions or airports is beneficial.
+* Good listings normally contain the type of listing (private room, 2-bedroom apartment)
+* Adding in proximity to local attractions or airports is beneficial (Yankee Stadium, Times Square).
 * Adding adjectives such as spacious, or cozy may slightly increase chance for the listing to stand out.
 
 [Back to Top](#Table-of-Contents)

@@ -84,8 +84,23 @@ Staten Island (limited amount of active top performers from Staten Island)
 Top Performers Overall
 <img width="1390" height="390" alt="price_vs_reviews_overall" src="https://github.com/user-attachments/assets/9ef0d1b3-04d5-4e44-a972-c5171cab51e0" />
 
-From this data we can see that as one might suspect that entire homes are listed at higher price than private rooms. However an unexpected trend can be seen as well. Top performers only booking 3 to 9 times per month on average.
-Looking at particular neighborhood regions, one can make other observations. Brooklyn, for example, a majority of private rooms tend to average around $50 per night and the average home or apartment starts at $125 to $200 per night.
+### Results
+* Overall we see that the price of entire home listings are listed at a higher average price than single private rooms as might be expected.
+  
+<ins>Top Performing Private Room Listings</ins>
+  * Bronx, Brooklyn, and Queens average  listing price is ~$50 per night
+  * Manhattan average listing price is ~$75-$125.
+  * Staten Island doesn't appear to have any current Top Performing private room listings which could provide a potential opportunity or a caution.
+
+<ins>Top Performing Entire Home/Apt Listings</ins>
+  * Bronx average listing price is ~$100
+  * Brooklyn average listing price ~$100-$200
+  * Manhattan average listing price ~150-$350
+  * Queens average listing price ~$100-$200
+  * Staten Island average listing price ~$75-$125
+
+> [!Note]
+> Top performers average only booking 3 to 9 times per month on average for most regions.
 
 [Back to Top](#Table-of-Contents)
 
